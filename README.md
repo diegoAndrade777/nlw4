@@ -1,4 +1,4 @@
-<img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FEu1c2_SXUAU6JPa.jpg&imgrefurl=https%3A%2F%2Ftwitter.com%2Frocketseat&tbnid=gd_X_qZkW2CqJM&vet=12ahUKEwjcpZTHpIHvAhUNCbkGHbIGAfUQMygIegUIARCqAQ..i&docid=VBT97JSb3B7gfM&w=828&h=834&q=nlw%204&safe=active&client=ubuntu&ved=2ahUKEwjcpZTHpIHvAhUNCbkGHbIGAfUQMygIegUIARCqAQ" align="center"></img>
+<img src="https://pbs.twimg.com/profile_banners/867362170392203265/1612207077/1500x500" align="center"></img>
 <h1 align="center">Next Level Week IV</h1>
 <p align="center">Project <strong>Move.it</strong> developed during the Rocketseat Next Level Week II.
 </p>
