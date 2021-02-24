@@ -23,7 +23,7 @@ To run the React's Frontend use:
 $ cd moveit-next
 
 # Install dependencies
-$ yarn install
+$ yarn
 
 # Run
 $ yarn dev
