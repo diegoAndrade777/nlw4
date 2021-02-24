@@ -30,6 +30,10 @@ $ yarn dev
 ```
 When the process end, automatically will open the page `localhost:3000` on your web browser with de Project move.it.
 
+## Technologies
+- [ReactJs](https://pt-br.reactjs.org/)
+- [NextJs](https://nextjs.org/)
+
 ## Licence
 
 [MIT](./LICENSE) &copy; [Rocketseat](https://rocketseat.com.br/)
