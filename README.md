@@ -15,7 +15,7 @@
 
 ## Frontend
 
-<img align="center" src="web/src/assets/images/frontend.gif"></img>
+<img align="center" src="assets/frontend.png"></img>
 
 To run the React's Frontend use:
 ```bash
@@ -23,12 +23,16 @@ To run the React's Frontend use:
 $ cd moveit-next
 
 # Install dependencies
-$ yarn install
+$ yarn
 
 # Run
 $ yarn dev
 ```
 When the process end, automatically will open the page `localhost:3000` on your web browser with de Project move.it.
+
+## Technologies
+- [ReactJs](https://pt-br.reactjs.org/)
+- [NextJs](https://nextjs.org/)
 
 ## Licence
 
