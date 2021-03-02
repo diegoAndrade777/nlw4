@@ -15,7 +15,7 @@
 
 ## Frontend
 
-<img align="center" src="assets/frontend.png"></img>
+<img align="center" src="assets/frontend.gif"></img>
 
 To run the React's Frontend use:
 ```bash

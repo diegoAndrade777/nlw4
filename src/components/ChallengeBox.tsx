@@ -1,30 +1,30 @@
 import { useContext } from 'react';
-import { ChallengeContext } from '../contexts/ChallengeContexts';
+import { ChallengeContext } from '../contexts/ChallengesContext';
 import { CountdownContext } from '../contexts/CountdownContext';
-import styles from '../styles/components/ChallengeBox.module.css'
+import styles from '../styles/components/ChallengeBox.module.css';
 
 export function ChallengeBox() {
   const { activeChallenge, resetChallenge, completeChallenge } = useContext(ChallengeContext);
-  const { resetCountdown } = useContext(CountdownContext)
+  const { resetCountdown } = useContext(CountdownContext);
 
-  function handleChallengeSucceeded() {
-    completeChallenge()
-    resetCountdown()
+  const handleChallengeSucceeded = () => {
+    completeChallenge();
+    resetCountdown();
   }
 
-  function handleChallengeFailed() {
-    resetChallenge()
-    resetCountdown()
+  const handleChallengeFailed = () => {
+    resetChallenge();
+    resetCountdown();
   }
 
   return (
     <div className={styles.challengeBoxContainer}>
-      { activeChallenge ? (
+      {activeChallenge ? (
         <div className={styles.challengeActive}>
           <header>Ganhe {activeChallenge.amount} xp</header>
 
           <main>
-            <img src={`icons/${activeChallenge.type}.svg`} />
+            <img src={`icons/${activeChallenge.type}.svg`} alt="Body level up" />
             <strong>Novo desafio</strong>
             <p>{activeChallenge.description}</p>
           </main>
@@ -48,15 +48,13 @@ export function ChallengeBox() {
         </div>
       ) : (
           <div className={styles.challengeNotActive}>
-            <strong>
-              Finalize um ciclo para receber receber um desafio
-                </strong>
+            <strong>Finalize um ciclo para receber um desafio</strong>
             <p>
               <img src="icons/level-up.svg" alt="Level Up" />
-                  Avance de level completando desafios
-          </p>
+                    Avance de level completando desafios.
+            </p>
           </div>
         )}
-    </div >
-  )
+    </div>
+  );
 }

@@ -19,6 +19,11 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/index.js"
     ],
+    "/[userInfoToHome]": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/[userInfoToHome].js"
+    ],
     "/_app": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",

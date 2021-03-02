@@ -1,29 +1,27 @@
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
-import { ChallengeContext } from "./ChallengeContexts";
-
+import { ChallengeContext } from "./ChallengesContext";
 interface CountdownContextData {
-  minutes: number;
-  seconds: number;
-  hasFinished: boolean;
-  isActive: boolean;
-  startCountdown: () => void;
-  resetCountdown: () => void;
+  minutes: number,
+  seconds: number,
+  hasFinished: boolean,
+  isActive: boolean,
+  startCountdown: () => void,
+  resetCountdown: () => void
 }
-
-interface CountdownProviderProps {
+interface CountdownContextProps {
   children: ReactNode;
 }
 
-export const CountdownContext = createContext({} as CountdownContextData)
-
 let countdownTimeout: NodeJS.Timeout;
 
-export function CountdownProvider({ children }: CountdownProviderProps) {
-  const { startNewChallenge } = useContext(ChallengeContext);
+export const CountdownContext = createContext({} as CountdownContextData);
 
-  const [time, setTime] = useState(0.1 * 60)
+export function CountdownProvider({ children }: CountdownContextProps) {
+  const [time, setTime] = useState(0.1 * 60);
   const [isActive, setIsActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
+
+  const { startNewChallenge } = useContext(ChallengeContext);
 
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
@@ -33,20 +31,20 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
   }
 
   function resetCountdown() {
-    clearTimeout(countdownTimeout)
+    clearTimeout(countdownTimeout);
     setIsActive(false);
-    setTime(0.1 * 60)
-    setHasFinished(false)
+    setTime(0.1 * 60);
+    setHasFinished(false);
   }
 
   useEffect(() => {
     if (isActive && time > 0) {
       countdownTimeout = setTimeout(() => {
-        setTime(time - 1);
-      }, 1000);
+        setTime(time - 1)
+      }, 1000)
     } else if (isActive && time === 0) {
-      setHasFinished(true)
-      setIsActive(false)
+      setHasFinished(true);
+      setIsActive(false);
       startNewChallenge();
     }
   }, [isActive, time])
@@ -62,5 +60,5 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
     }}>
       {children}
     </CountdownContext.Provider>
-  )
+  );
 }
