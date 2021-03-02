@@ -20,7 +20,7 @@
 To run the React's Frontend use:
 ```bash
 # Enter on frontend directory
-$ cd moveit-next
+$ cd nlw4-move.it
 
 # Install dependencies
 $ yarn
